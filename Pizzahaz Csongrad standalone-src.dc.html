@@ -90,6 +90,11 @@
     .gal-cap { font-size: 10px; padding: 5px 12px; left: 10px; bottom: 10px; }
   }
 
+  .deco-spin-a { animation: deco-spin-a 22s linear infinite; }
+  @keyframes deco-spin-a { from { transform: rotate(-10deg); } to { transform: rotate(350deg); } }
+  .deco-spin-b { animation: deco-spin-b 28s linear infinite; }
+  @keyframes deco-spin-b { from { transform: rotate(10deg); } to { transform: rotate(-350deg); } }
+
   .rev-slide { opacity: 0; position: absolute; inset: 0; animation-duration: 20s; animation-iteration-count: infinite; animation-timing-function: linear; }
   .rev-slide-0 { animation-name: rev-fade-0; }
   .rev-slide-1 { animation-name: rev-fade-1; }
@@ -131,8 +136,8 @@
         <div class="hero" style="position: relative; z-index: 0; overflow: hidden; padding: 72px 64px 90px; text-align: center; border-bottom: 3px solid #17181A;">
           <div class="deco" style="position: absolute; left: -485px; bottom: -310px; width: 970px; height: 970px; border-radius: 50%; background: radial-gradient(circle, rgba(255,150,40,0.7) 0%, rgba(255,150,40,0) 70%); filter: blur(6px); z-index: -2; pointer-events: none;"></div>
           <div class="deco" style="position: absolute; right: -580px; top: -530px; width: 1160px; height: 1160px; border-radius: 50%; background: radial-gradient(circle, rgba(255,150,40,0.7) 0%, rgba(255,150,40,0) 70%); filter: blur(6px); z-index: -2; pointer-events: none;"></div>
-          <img class="deco" src="./786429036-cutout.png" alt="Gyros pizza" style="position: absolute; left: -375px; bottom: -200px; width: 750px; height: 750px; object-fit: contain; transform: rotate(-10deg); z-index: -1; filter: drop-shadow(0 20px 26px rgba(23,24,26,0.22));">
-          <img class="deco" src="./784693905-cutout.png" alt="White Moon pizza" style="position: absolute; right: -450px; top: -400px; width: 900px; height: 900px; object-fit: contain; transform: rotate(10deg); z-index: -1; filter: drop-shadow(0 20px 26px rgba(23,24,26,0.22));">
+          <img class="deco deco-spin-a" src="./786429036-cutout.png" alt="Gyros pizza" style="position: absolute; left: -375px; bottom: -200px; width: 750px; height: 750px; object-fit: contain; z-index: -1; filter: drop-shadow(0 20px 26px rgba(23,24,26,0.22));">
+          <img class="deco deco-spin-b" src="./784693905-cutout.png" alt="White Moon pizza" style="position: absolute; right: -450px; top: -400px; width: 900px; height: 900px; object-fit: contain; z-index: -1; filter: drop-shadow(0 20px 26px rgba(23,24,26,0.22));">
           <div style="position: relative; z-index: 1;">
             <div class="badge" style="display: inline-block; border: 2px solid #1F6B4A; color: #1F6B4A; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 7px 16px; margin-bottom: 30px; background: #FBF3E0;">Csongrád · Vasút u. 6.</div>
             <h1 style="font-family: 'Archivo Black', sans-serif; font-size: 88px; line-height: 0.95; letter-spacing: -0.035em; text-transform: uppercase; margin: 0 auto 30px; max-width: 1180px; text-wrap: balance;">Pizza, gyros és rántott finomságok <span style="color: #D02B22;">egy étlapon</span></h1>
