@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&amp;family=Archivo:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #FBF3E0; }
+  a { color: inherit; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</helmet>
+
+<div style="width: 1440px; margin: 0 auto; background: #FBF3E0; color: #17181A; font-family: 'Archivo', sans-serif; box-shadow: 0 24px 60px rgba(43,33,27,0.14);">
+        <div style="height: 14px; background: repeating-linear-gradient(90deg, #1F6B4A 0 60px, #FBF3E0 60px 120px, #D02B22 120px 180px, #FBF3E0 180px 240px);"></div>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 22px 64px; border-bottom: 3px solid #17181A;">
+          <div style="display: flex; align-items: center; gap: 16px;"><img src="./logo-pizzahaz-csongrad.jpg" alt="Pizzaház Csongrád" style="width: 62px; height: 62px; border-radius: 50%; object-fit: cover; display: block;"><div style="font-family: 'Archivo Black', sans-serif; font-size: 22px; line-height: 1.05; letter-spacing: -0.02em; text-transform: uppercase;">Pizzaház<br>Csongrád</div></div>
+          <div style="display: flex; gap: 30px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;">
+            <a href="#etlap">Étlap</a><a href="#rolunk">Rólunk</a><a href="#velemenyek">Vélemények</a><a href="#kapcsolat">Kapcsolat</a>
+          </div>
+          <a href="tel:+3663787434" style="background: #D02B22; color: #FBF3E0; padding: 12px 22px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">(06 63) 787 434</a>
+        </div>
+
+        <div style="position: relative; z-index: 0; overflow: hidden; padding: 72px 64px 90px; text-align: center; border-bottom: 3px solid #17181A;">
+          <div style="position: absolute; left: -485px; bottom: -310px; width: 970px; height: 970px; border-radius: 50%; background: radial-gradient(circle, rgba(255,150,40,0.7) 0%, rgba(255,150,40,0) 70%); filter: blur(6px); z-index: -2; pointer-events: none;"></div>
+          <div style="position: absolute; right: -580px; top: -530px; width: 1160px; height: 1160px; border-radius: 50%; background: radial-gradient(circle, rgba(255,150,40,0.7) 0%, rgba(255,150,40,0) 70%); filter: blur(6px); z-index: -2; pointer-events: none;"></div>
+          <img src="./786429036-cutout.png" alt="Gyros pizza" style="position: absolute; left: -375px; bottom: -200px; width: 750px; height: 750px; object-fit: contain; transform: rotate(-10deg); z-index: -1; filter: drop-shadow(0 20px 26px rgba(23,24,26,0.22));">
+          <img src="./784693905-cutout.png" alt="White Moon pizza" style="position: absolute; right: -450px; top: -400px; width: 900px; height: 900px; object-fit: contain; transform: rotate(10deg); z-index: -1; filter: drop-shadow(0 20px 26px rgba(23,24,26,0.22));">
+          <div style="position: relative; z-index: 1;">
+            <div style="display: inline-block; border: 2px solid #1F6B4A; color: #1F6B4A; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 7px 16px; margin-bottom: 30px; background: #FBF3E0;">Csongrád · Vasút u. 6.</div>
+            <h1 style="font-family: 'Archivo Black', sans-serif; font-size: 88px; line-height: 0.95; letter-spacing: -0.035em; text-transform: uppercase; margin: 0 auto 30px; max-width: 1180px; text-wrap: balance;">Pizza, gyros és rántott finomságok <span style="color: #D02B22;">egy étlapon</span></h1>
+            <p style="font-size: 20px; line-height: 1.55; margin: 0 auto 40px; max-width: 720px; color: #3B3D40; text-wrap: pretty; background: #FBF3E0; display: inline-block;">Kézzel nyújtott pizzák, ropogósra sütött húsok, bőséges tálak és desszertek — minden nap friss alapanyagokból, gyors kiszállítással Csongrádon.</p>
+            <div style="display: flex; gap: 14px; justify-content: center;">
+              <a href="tel:+3663787434" style="background: #17181A; color: #FBF3E0; padding: 16px 32px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Rendelés: (06 63) 787 434</a>
+              <a href="#etlap" style="border: 2px solid #17181A; padding: 14px 32px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; background: #FBF3E0;">Étlap megtekintése</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="etlap" style="padding: 80px 64px; border-bottom: 3px solid #17181A;">
+          <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 12px;">
+            <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 52px; text-transform: uppercase; letter-spacing: -0.03em; margin: 0;">Étlap</h2>
+            <span style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #1F6B4A;">Pizzák XL / XXL méretben</span>
+          </div>
+          <p style="font-size: 15px; color: #5B5D60; margin: 0 0 48px;">Válogatás a teljes kínálatból — 9 kategória, 100+ étel. A részletes étlapot telefonon vagy helyben mutatjuk meg. Az árak a csomagolás díját nem tartalmazzák.</p>
+
+          <div style="margin-bottom: 52px;">
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+              <div style="width: 56px; height: 56px; border-radius: 50%; background: #FFF9EA; border: 2px solid #17181A; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;"><img src="./786429036-cutout.png" alt="Pizza a Pizzaház Csongrádtól" style="width: 100%; height: 100%; object-fit: cover;"></div>
+              <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: -0.02em; margin: 0;">Pizzák</h3>
+              <span style="flex: 1; height: 2px; background: #17181A;"></span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px;">
+              <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(23,24,26,0.15);"><div><div style="font-weight: 700; font-size: 16px;">Margherita</div><div style="font-size: 13px; color: #5B5D60; margin-top: 2px;">Paradicsomos alap, sajt, paradicsomkarika</div></div><div style="font-family: 'Archivo Black', sans-serif; font-size: 14px; color: #D02B22; text-align: right; white-space: nowrap;">XL 2.780 Ft<br>XXL 4.800 Ft</div></div>
+              <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(23,24,26,0.15);"><div><div style="font-weight: 700; font-size: 16px;">Négy évszak</div><div style="font-size: 13px; color: #5B5D60; margin-top: 2px;">Sonka, szalámi, kukorica, gomba</div></div><div style="font-family: 'Archivo Black', sans-serif; font-size: 14px; color: #D02B22; text-align: right; white-space: nowrap;">XL 3.100 Ft<br>XXL 5.200 Ft</div></div>
+              <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(23,24,26,0.15);"><div><div style="font-weight: 700; font-size: 16px;">Sonka-Gomba</div><div style="font-size: 13px; color: #5B5D60; margin-top: 2px;">Paradicsomos alap, sajt, sonka, gomba</div></div><div style="font-family: 'Archivo Black', sans-serif; font-size: 14px; color: #D02B22; text-align: right; white-space: nowrap;">XL 2.780 Ft<br>XXL 4.800 Ft</div></div>
+              <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(23,24,26,0.15);"><div><div style="font-weight: 700; font-size: 16px;">Gyros pizza</div><div style="font-size: 13px; color: #5B5D60; margin-top: 2px;">Sajt, gyros hús, salátamix, gyros öntet</div></div><div style="font-family: 'Archivo Black', sans-serif; font-size: 14px; color: #D02B22; text-align: right; white-space: nowrap;">XL 3.230 Ft<br>XXL 5.350 Ft</div></div>
+              <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(23,24,26,0.15);"><div><div style="font-weight: 700; font-size: 16px;">Görög</div><div style="font-size: 13px; color: #5B5D60; margin-top: 2px;">Sajt, sonka, salátamix, joghurtos öntet</div></div><div style="font-family: 'Archivo Black', sans-serif; font-size: 14px; color: #D02B22; text-align: right; white-space: nowrap;">XL 3.100 Ft<br>XXL 5.200 Ft</div></div>
+              <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(23,24,26,0.15);"><div><div style="font-weight: 700; font-size: 16px;">Don Corleone</div><div style="font-size: 13px; color: #5B5D60; margin-top: 2px;">Tejfölös alap, sajt, sonka, szalámi, bacon, hagyma, tükörtojás</div></div><div style="font-family: 'Archivo Black', sans-serif; font-size: 14px; color: #D02B22; text-align: right; white-space: nowrap;">XL 3.230 Ft<br>XXL 5.350 Ft</div></div>
+              <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(23,24,26,0.15);"><div><div style="font-weight: 700; font-size: 16px;">Hawaii</div><div style="font-size: 13px; color: #5B5D60; margin-top: 2px;">Tejszínes alap, mozzarella, sonka, ananász, kukorica</div></div><div style="font-family: 'Archivo Black', sans-serif; font-size: 14px; color: #D02B22; text-align: right; white-space: nowrap;">XL 3.100 Ft<br>XXL 5.200 Ft</div></div>
+              <div style="display: flex; justify-content: space-between; gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(23,24,26,0.15);"><div><div style="font-weight: 700; font-size: 16px;">Big Boss</div><div style="font-size: 13px; color: #5B5D60; margin-top: 2px;">Sajt, bacon, szalámi, pepperóni, tejföllel rásütve</div></div><div style="font-family: 'Archivo Black', sans-serif; font-size: 14px; color: #D02B22; text-align: right; white-space: nowrap;">XL 3.100 Ft<br>XXL 5.200 Ft</div></div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 52px;">
+            <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+              <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: -0.02em; margin: 0;">Lepények</h3>
+              <span style="flex: 1; height: 2px; background: #17181A;"></span>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Sonkás <span style="color: #5B5D60; font-size: 13px;">— tejföl, sonka, csemegeuborka, sajt</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.100 Ft</span></div>
+              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Sonkás-gombás</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.400 Ft</span></div>
+              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Hamburgeres <span style="color: #5B5D60; font-size: 13px;">— salátamix, hamburgerhús, sajt</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.720 Ft</span></div>
+              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Gyros <span style="color: #5B5D60; font-size: 13px;">— salátamix, gyros hús, gyros öntet</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.720 Ft</span></div>
+              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Ínyenc <span style="color: #5B5D60; font-size: 13px;">— hamburgerhús, tükörtojás, bacon, sajt</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.720 Ft</span></div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 52px;">
+            <div>
+              <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+                <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: -0.02em; margin: 0;">Sertéshúsos</h3>
+                <span style="flex: 1; height: 2px; background: #17181A;"></span>
+              </div>
+              <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Rántott borda</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.190 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Cigánypecsenye kakastaréjjal</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.640 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Milánói sertésborda <span style="color: #5B5D60; font-size: 13px;">— milánói spagettivel</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.990 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Favágó szelet <span style="color: #5B5D60; font-size: 13px;">— sonkával, gombával, sajttal töltve</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.890 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Hagymás rostélyos</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.990 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Libamájjal töltött sertésszelet</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">3.990 Ft</span></div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+                <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: -0.02em; margin: 0;">Szárnyas</h3>
+                <span style="flex: 1; height: 2px; background: #17181A;"></span>
+              </div>
+              <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Grillezett csirkemell</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.200 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Rántott csirkemell <span style="color: #5B5D60; font-size: 13px;">— szezámmagos bundában</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.490 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Csirkemell roston <span style="color: #5B5D60; font-size: 13px;">— baconnal, sajttal grillezve</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.590 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Hawaii csirkemell <span style="color: #5B5D60; font-size: 13px;">— ananásszal, sajttal töltve</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.590 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Kijevi csirkemell <span style="color: #5B5D60; font-size: 13px;">— fűszervajjal töltve</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.590 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Parmezánbundás rántott csirkemell</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.790 Ft</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 52px;">
+            <div>
+              <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+                <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: -0.02em; margin: 0;">Vegetáriánus &amp; Tészták</h3>
+                <span style="flex: 1; height: 2px; background: #17181A;"></span>
+              </div>
+              <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Rántott sajt</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.190 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Falafel tál <span style="color: #5B5D60; font-size: 13px;">— hasábburgonya, saláta, gyros öntet</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.990 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Sajtvariációk <span style="color: #5B5D60; font-size: 13px;">— mozzarella rudak, arancini, cheddar</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.490 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Bolognai spagetti</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.490 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Carbonara spagetti</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.590 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Tenger gyümölcsei tagliatelle</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">3.300 Ft</span></div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+                <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: -0.02em; margin: 0;">Készételek &amp; Saláták</h3>
+                <span style="flex: 1; height: 2px; background: #17181A;"></span>
+              </div>
+              <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Gyros tál</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.790 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Ördög gyros <span style="color: #5B5D60; font-size: 13px;">— csípős paradicsomos öntettel</span></span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.790 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Cézár saláta</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">2.100 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Görög saláta</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">1.600 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Marhapörkölt nokedlivel</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">3.790 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Körömpörkölt</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">3.000 Ft</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-bottom: 52px;">
+            <div>
+              <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+                <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: -0.02em; margin: 0;">Köretek</h3>
+                <span style="flex: 1; height: 2px; background: #17181A;"></span>
+              </div>
+              <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 15px;"><span>Hasábburgonya</span><span style="font-weight: 700; white-space: nowrap;">650 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 15px;"><span>Rizi-bizi</span><span style="font-weight: 700; white-space: nowrap;">650 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 15px;"><span>Burgonyapüré</span><span style="font-weight: 700; white-space: nowrap;">850 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 15px;"><span>Édesburgonya</span><span style="font-weight: 700; white-space: nowrap;">1.100 Ft</span></div>
+              </div>
+            </div>
+            <div>
+              <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+                <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: -0.02em; margin: 0;">Öntetek</h3>
+                <span style="flex: 1; height: 2px; background: #17181A;"></span>
+              </div>
+              <div style="display: flex; flex-direction: column;">
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 15px;"><span>Gyros öntet</span><span style="font-weight: 700; white-space: nowrap;">400 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 15px;"><span>Csípős paradicsomos öntet</span><span style="font-weight: 700; white-space: nowrap;">350 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 15px;"><span>Tartármártás</span><span style="font-weight: 700; white-space: nowrap;">600 Ft</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 15px;"><span>Áfonyalekvár</span><span style="font-weight: 700; white-space: nowrap;">600 Ft</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-bottom: 52px;">
+            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 20px;">
+              <div style="width: 56px; height: 56px; border-radius: 50%; background: #FFF9EA; border: 2px solid #17181A; display: flex; align-items: center; justify-content: center; flex-shrink: 0; overflow: hidden;"><img src="./765638097-cutout.png" alt="Bőségtál a Pizzaház Csongrádtól" style="width: 100%; height: 100%; object-fit: cover;"></div>
+              <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: -0.02em; margin: 0;">Tálak — társaságnak</h3>
+              <span style="flex: 1; height: 2px; background: #17181A;"></span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+              <div style="border: 2px solid #17181A; padding: 24px; background: #FFF9EA;">
+                <div style="font-family: 'Archivo Black', sans-serif; font-size: 18px; text-transform: uppercase; margin-bottom: 8px;">Sültes tál</div>
+                <div style="font-size: 13px; color: #5B5D60; line-height: 1.5; margin-bottom: 16px;">Cigánypecsenye, csirkecombfilé roston, sajtos-sonkás borda, itatós tekercs, csirkemell roston, vegyes köret</div>
+                <div style="font-size: 13px; font-weight: 700;">2 fő <span style="color: #D02B22;">8.100 Ft</span> · 4 fő <span style="color: #D02B22;">15.100 Ft</span> · 6 fő <span style="color: #D02B22;">22.500 Ft</span></div>
+              </div>
+              <div style="border: 2px solid #17181A; padding: 24px; background: #FFF9EA;">
+                <div style="font-family: 'Archivo Black', sans-serif; font-size: 18px; text-transform: uppercase; margin-bottom: 8px;">Alföldi bőségtál</div>
+                <div style="font-size: 13px; color: #5B5D60; line-height: 1.5; margin-bottom: 16px;">Csirkecombfilé roston, sajtos-sonkás borda, csípős tekercs, rántott sajt/gomba/hagymakarika, köret</div>
+                <div style="font-size: 13px; font-weight: 700;">2 fő <span style="color: #D02B22;">8.100 Ft</span> · 4 fő <span style="color: #D02B22;">15.100 Ft</span> · 6 fő <span style="color: #D02B22;">22.500 Ft</span></div>
+              </div>
+              <div style="border: 2px solid #17181A; padding: 24px; background: #FFF9EA;">
+                <div style="font-family: 'Archivo Black', sans-serif; font-size: 18px; text-transform: uppercase; margin-bottom: 8px;">1 kg rántott hús</div>
+                <div style="font-size: 13px; color: #5B5D60; line-height: 1.5; margin-bottom: 16px;">Tarja, csirkemell, karaj vegyesen, 1 kg választható körettel</div>
+                <div style="font-size: 13px; font-weight: 700;"><span style="color: #D02B22;">11.990 Ft</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div style="display: flex; align-items: baseline; gap: 16px; margin-bottom: 20px;">
+              <h3 style="font-family: 'Archivo Black', sans-serif; font-size: 26px; text-transform: uppercase; letter-spacing: -0.02em; margin: 0;">Desszertek</h3>
+              <span style="flex: 1; height: 2px; background: #17181A;"></span>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0 48px;">
+              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Csokoládé szuflé</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">950 Ft</span></div>
+              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Somlói galuska</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">1.100 Ft</span></div>
+              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Meggyes rétes (2 db)</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">1.050 Ft</span></div>
+              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Palacsinta, csokoládés (2 db)</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">900 Ft</span></div>
+              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Gesztenyepüré</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">1.100 Ft</span></div>
+              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(23,24,26,0.15); font-size: 16px;"><span>Mini fánk (6 db)</span><span style="font-family: 'Archivo Black', sans-serif; color: #D02B22; white-space: nowrap;">950 Ft</span></div>
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 12px;">
+            <a href="Pizzahaz Csongrad Teljes Etlap.dc.html" style="display: inline-block; border: 2px solid #17181A; padding: 16px 36px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Teljes étlap megtekintése (100+ étel) →</a>
+          </div>
+        </div>
+
+        <div id="rolunk" style="background: #1F6B4A; color: #FBF3E0; padding: 80px 64px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center;">
+          <div>
+            <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 52px; text-transform: uppercase; letter-spacing: -0.03em; margin: 0 0 24px;">Rólunk</h2>
+            <p style="font-size: 19px; line-height: 1.7; margin: 0; color: #EEE6D2; text-wrap: pretty;">Csongrádi pizzéria vagyunk a Vasút utcában. A klasszikus, kézzel nyújtott pizzák mellett rántott húsokat, gyroszt, szárnyas ételeket, bőséges tálakat és desszerteket is készítünk — minden nap friss alapanyagokból. Helyben és házhoz szállítva is várunk.</p>
+          </div>
+          <div style="height: 380px; position: relative; overflow: hidden;"><img src="./rolunk.jpg" alt="A Pizzaház Csongrád belső tere" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+        </div>
+
+        <div id="velemenyek" style="padding: 80px 64px; border-bottom: 3px solid #17181A;">
+          <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 52px; text-transform: uppercase; letter-spacing: -0.03em; margin: 0 0 44px;">Vélemények</h2>
+          <div style="max-width: 780px; margin: 0 auto; border: 2px solid #17181A; padding: 36px 40px; background: #FFF9EA;">
+            <p style="font-size: 19px; line-height: 1.6; margin: 0 0 22px; text-wrap: pretty;">„Sokadjára rendeltünk tőlük pizzát. Most sem volt semmi gond. A pizzák finomak, akkorra érkeztek, amikorra mondták, a futár az emeletre is felhozta. Az ilyen véleményeket is írjátok meg, ne csak azt, ha épp becsúszik egy hiba! 😄 Köszönöm.”</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+              <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #D02B22;">Vendégértékelés</div>
+              <div style="display: flex; gap: 20px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;">
+                <span>Étel <span style="color: #1F6B4A;">5/5</span></span>
+                <span>Szolgáltatás <span style="color: #1F6B4A;">5/5</span></span>
+                <span>Hangulat <span style="color: #1F6B4A;">5/5</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="kapcsolat" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; padding: 80px 64px;">
+          <div>
+            <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 40px; text-transform: uppercase; letter-spacing: -0.03em; margin: 0 0 26px;">Nyitvatartás</h2>
+            <div style="display: flex; flex-direction: column; gap: 0; font-size: 17px;">
+              <div style="display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 2px solid #17181A;"><span>Hétfő–Szombat</span><span style="font-weight: 700;">11:00–21:00</span></div>
+              <div style="display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 2px solid #17181A;"><span>Vasárnap</span><span style="font-weight: 700;">11:00–20:00</span></div>
+            </div>
+            <div style="margin-top: 30px; font-size: 17px; line-height: 1.8;">
+              Csongrád, Vasút u. 6, 6640<br><a href="tel:+3663787434">(06 63) 787 434</a>
+            </div>
+          </div>
+          <div style="border: 3px solid #17181A; padding: 40px; background: #FFF9EA;">
+            <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 40px; text-transform: uppercase; letter-spacing: -0.03em; margin: 0 0 26px;">Rendelés</h2>
+            <p style="font-size: 16px; line-height: 1.6; margin: 0 0 28px; color: #3B3D40;">Csongrádon házhoz szállítunk, és helyben is várunk. Rendelésedet telefonon vesszük fel.</p>
+            <a href="tel:+3663787434" style="display: block; text-align: center; background: #D02B22; color: #FBF3E0; padding: 18px; font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">(06 63) 787 434</a>
+            <div style="margin-top: 16px; font-size: 14px; color: #5B5D60; text-align: center;">Nyitvatartás: H–Szo 11:00–21:00 · V 11:00–20:00</div>
+          </div>
+        </div>
+
+        <div style="background: #17181A; color: #FBF3E0; padding: 36px 64px; display: flex; justify-content: space-between; align-items: center;">
+          <span style="display: flex; align-items: center; gap: 14px; font-family: 'Archivo Black', sans-serif; font-size: 20px; text-transform: uppercase;"><img src="./logo-pizzahaz-csongrad.jpg" alt="" style="width: 48px; height: 48px; border-radius: 50%; object-fit: cover; display: block;">Pizzaház Csongrád</span>
+          <span style="font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em;">Csongrád, Vasút u. 6. · (06 63) 787 434</span>
+        </div>
+        <div style="height: 14px; background: repeating-linear-gradient(90deg, #1F6B4A 0 60px, #FBF3E0 60px 120px, #D02B22 120px 180px, #FBF3E0 180px 240px);"></div>
+      </div>
+
+</x-dc>
+</body>
+</html>
