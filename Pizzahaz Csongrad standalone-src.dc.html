@@ -64,12 +64,16 @@
     .footer-row { flex-direction: column !important; gap: 10px !important; text-align: center !important; padding: 24px 18px !important; }
   }
 
-  .gal-track { display: flex; width: max-content; animation: gal-scroll 22s linear infinite; }
+  .gal-wrap { position: relative; overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent); }
+  .gal-track { display: flex; gap: 24px; width: max-content; padding: 10px 4px 22px; animation: gal-scroll 26s linear infinite; }
   @keyframes gal-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .gal-thumb { flex: 0 0 auto; width: 240px; height: 170px; margin-right: 16px; overflow: hidden; border: 2px solid #17181A; }
+  .gal-thumb { position: relative; flex: 0 0 auto; width: 280px; height: 200px; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 26px rgba(23,24,26,0.22); }
   .gal-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gal-cap { position: absolute; left: 14px; bottom: 14px; background: #D02B22; color: #FBF3E0; padding: 7px 16px; border-radius: 999px; font-family: 'Archivo Black', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
   @media (max-width: 680px) {
-    .gal-thumb { width: 160px; height: 120px; margin-right: 10px; }
+    .gal-thumb { width: 190px; height: 140px; border-radius: 12px; }
+    .gal-track { gap: 14px; }
+    .gal-cap { font-size: 10px; padding: 5px 12px; left: 10px; bottom: 10px; }
   }
 </style>
 </helmet>
@@ -136,16 +140,16 @@
         <div id="galeria" style="padding: 80px 64px; border-bottom: 3px solid #17181A;">
           <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 52px; text-transform: uppercase; letter-spacing: -0.03em; margin: 0 0 12px;">Galéria</h2>
           <p style="font-size: 15px; color: #5B5D60; margin: 0 0 36px;">Néhány pillanat a konyhánkból és az ételeinkből.</p>
-          <div style="overflow: hidden; border: 2px solid #17181A; background: #FFF9EA; padding: 16px 0 16px 16px;">
+          <div class="gal-wrap">
             <div class="gal-track">
-              <div class="gal-thumb"><img src="./786429036_1611724677554572_7541401596766743550_n.jpg" alt="Gyros pizza"></div>
-              <div class="gal-thumb"><img src="./765638097_1595972259129814_1792326114794346796_n.jpg" alt="Bőségtál"></div>
-              <div class="gal-thumb"><img src="./768586386_1595972262463147_4394131840180978387_n.jpg" alt="Bőségtál"></div>
-              <div class="gal-thumb" style="background: #FBF3E0; display: flex; align-items: center; justify-content: center;"><img src="./784693905-cutout.png" alt="Sonkás-csemegeuborkás pizza" style="width: auto; height: auto; max-width: 80%; max-height: 80%; object-fit: contain;"></div>
-              <div class="gal-thumb"><img src="./786429036_1611724677554572_7541401596766743550_n.jpg" alt="Gyros pizza"></div>
-              <div class="gal-thumb"><img src="./765638097_1595972259129814_1792326114794346796_n.jpg" alt="Bőségtál"></div>
-              <div class="gal-thumb"><img src="./768586386_1595972262463147_4394131840180978387_n.jpg" alt="Bőségtál"></div>
-              <div class="gal-thumb" style="background: #FBF3E0; display: flex; align-items: center; justify-content: center;"><img src="./784693905-cutout.png" alt="Sonkás-csemegeuborkás pizza" style="width: auto; height: auto; max-width: 80%; max-height: 80%; object-fit: contain;"></div>
+              <div class="gal-thumb"><img src="./786429036_1611724677554572_7541401596766743550_n.jpg" alt="Gyros pizza"><span class="gal-cap">Gyros pizza</span></div>
+              <div class="gal-thumb"><img src="./765638097_1595972259129814_1792326114794346796_n.jpg" alt="Bőségtál"><span class="gal-cap">Bőségtál</span></div>
+              <div class="gal-thumb"><img src="./768586386_1595972262463147_4394131840180978387_n.jpg" alt="Bőségtál"><span class="gal-cap">Bőségtál</span></div>
+              <div class="gal-thumb"><img src="./784693905_1611724617554578_8112537963859442747_n.jpg" alt="Sonkás-csemegeuborkás pizza"><span class="gal-cap">Sonkás-csemegeuborkás</span></div>
+              <div class="gal-thumb"><img src="./786429036_1611724677554572_7541401596766743550_n.jpg" alt="Gyros pizza"><span class="gal-cap">Gyros pizza</span></div>
+              <div class="gal-thumb"><img src="./765638097_1595972259129814_1792326114794346796_n.jpg" alt="Bőségtál"><span class="gal-cap">Bőségtál</span></div>
+              <div class="gal-thumb"><img src="./768586386_1595972262463147_4394131840180978387_n.jpg" alt="Bőségtál"><span class="gal-cap">Bőségtál</span></div>
+              <div class="gal-thumb"><img src="./784693905_1611724617554578_8112537963859442747_n.jpg" alt="Sonkás-csemegeuborkás pizza"><span class="gal-cap">Sonkás-csemegeuborkás</span></div>
             </div>
           </div>
         </div>
