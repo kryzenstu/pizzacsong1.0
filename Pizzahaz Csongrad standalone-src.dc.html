@@ -70,6 +70,12 @@
     #kapcsolat { grid-template-columns: 1fr !important; gap: 28px !important; }
 
     .footer-row { flex-direction: column !important; gap: 10px !important; text-align: center !important; padding: 24px 18px !important; }
+
+    .rev-box { height: 360px !important; }
+    .rev-slide { padding: 24px 20px !important; }
+    .rev-stars { font-size: 13px !important; margin-bottom: 10px !important; }
+    .rev-text { font-size: 14px !important; line-height: 1.5 !important; margin-bottom: 12px !important; }
+    .rev-meta { font-size: 10px !important; }
   }
 
   .gal-wrap { position: relative; overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent); }
@@ -83,6 +89,30 @@
     .gal-track { gap: 14px; }
     .gal-cap { font-size: 10px; padding: 5px 12px; left: 10px; bottom: 10px; }
   }
+
+  .rev-slide { opacity: 0; position: absolute; inset: 0; animation-duration: 20s; animation-iteration-count: infinite; animation-timing-function: linear; }
+  .rev-slide-0 { animation-name: rev-fade-0; }
+  .rev-slide-1 { animation-name: rev-fade-1; }
+  .rev-slide-2 { animation-name: rev-fade-2; }
+  .rev-slide-3 { animation-name: rev-fade-3; }
+  .rev-slide-4 { animation-name: rev-fade-4; }
+  @keyframes rev-fade-0 { 0% { opacity: 0; } 3% { opacity: 1; } 17% { opacity: 1; } 20% { opacity: 0; } 100% { opacity: 0; } }
+  @keyframes rev-fade-1 { 0% { opacity: 0; } 20% { opacity: 0; } 23% { opacity: 1; } 37% { opacity: 1; } 40% { opacity: 0; } 100% { opacity: 0; } }
+  @keyframes rev-fade-2 { 0% { opacity: 0; } 40% { opacity: 0; } 43% { opacity: 1; } 57% { opacity: 1; } 60% { opacity: 0; } 100% { opacity: 0; } }
+  @keyframes rev-fade-3 { 0% { opacity: 0; } 60% { opacity: 0; } 63% { opacity: 1; } 77% { opacity: 1; } 80% { opacity: 0; } 100% { opacity: 0; } }
+  @keyframes rev-fade-4 { 0% { opacity: 0; } 80% { opacity: 0; } 83% { opacity: 1; } 97% { opacity: 1; } 100% { opacity: 0; } }
+
+  .rev-dot { width: 9px; height: 9px; border-radius: 50%; animation-duration: 20s; animation-iteration-count: infinite; animation-timing-function: linear; }
+  .rev-dot-0 { animation-name: rev-dot-0; }
+  .rev-dot-1 { animation-name: rev-dot-1; }
+  .rev-dot-2 { animation-name: rev-dot-2; }
+  .rev-dot-3 { animation-name: rev-dot-3; }
+  .rev-dot-4 { animation-name: rev-dot-4; }
+  @keyframes rev-dot-0 { 0% { background-color: #D02B22; } 20% { background-color: #D02B22; } 20% { background-color: rgba(23,24,26,0.25); } 100% { background-color: rgba(23,24,26,0.25); } }
+  @keyframes rev-dot-1 { 0% { background-color: rgba(23,24,26,0.25); } 20% { background-color: rgba(23,24,26,0.25); } 20% { background-color: #D02B22; } 40% { background-color: #D02B22; } 40% { background-color: rgba(23,24,26,0.25); } 100% { background-color: rgba(23,24,26,0.25); } }
+  @keyframes rev-dot-2 { 0% { background-color: rgba(23,24,26,0.25); } 40% { background-color: rgba(23,24,26,0.25); } 40% { background-color: #D02B22; } 60% { background-color: #D02B22; } 60% { background-color: rgba(23,24,26,0.25); } 100% { background-color: rgba(23,24,26,0.25); } }
+  @keyframes rev-dot-3 { 0% { background-color: rgba(23,24,26,0.25); } 60% { background-color: rgba(23,24,26,0.25); } 60% { background-color: #D02B22; } 80% { background-color: #D02B22; } 80% { background-color: rgba(23,24,26,0.25); } 100% { background-color: rgba(23,24,26,0.25); } }
+  @keyframes rev-dot-4 { 0% { background-color: rgba(23,24,26,0.25); } 80% { background-color: rgba(23,24,26,0.25); } 80% { background-color: #D02B22; } 100% { background-color: #D02B22; } }
 </style>
 </helmet>
 
@@ -106,7 +136,7 @@
           <div style="position: relative; z-index: 1;">
             <div class="badge" style="display: inline-block; border: 2px solid #1F6B4A; color: #1F6B4A; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 7px 16px; margin-bottom: 30px; background: #FBF3E0;">Csongrád · Vasút u. 6.</div>
             <h1 style="font-family: 'Archivo Black', sans-serif; font-size: 88px; line-height: 0.95; letter-spacing: -0.035em; text-transform: uppercase; margin: 0 auto 30px; max-width: 1180px; text-wrap: balance;">Pizza, gyros és rántott finomságok <span style="color: #D02B22;">egy étlapon</span></h1>
-            <p style="font-size: 20px; line-height: 1.55; margin: 0 auto 40px; max-width: 720px; color: #3B3D40; text-wrap: pretty; background: #FBF3E0; display: inline-block;">Kézzel nyújtott pizzák, ropogósra sütött húsok, bőséges tálak és desszertek — minden nap friss alapanyagokból, gyors kiszállítással Csongrádon.</p>
+            <p style="font-size: 20px; line-height: 1.55; margin: 0 auto 40px; max-width: 720px; color: #3B3D40; text-wrap: pretty;">Kézzel nyújtott pizzák, ropogósra sütött húsok, bőséges tálak és desszertek — minden nap friss alapanyagokból, gyors kiszállítással Csongrádon.</p>
             <div class="hero-btns" style="display: flex; gap: 14px; justify-content: center;">
               <a href="tel:+3663787434" style="background: #17181A; color: #FBF3E0; padding: 16px 32px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Rendelés: (06 63) 787 434</a>
               <a href="#etlap" style="border: 2px solid #17181A; padding: 14px 32px; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; background: #FBF3E0;">Étlap megtekintése</a>
@@ -175,31 +205,38 @@
         <div id="velemenyek" style="padding: 80px 64px; border-bottom: 3px solid #17181A;">
           <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 52px; text-transform: uppercase; letter-spacing: -0.03em; margin: 0 0 12px;">Vélemények</h2>
           <p style="font-size: 15px; color: #5B5D60; margin: 0 0 36px;">Valódi Google-értékelések a vendégeinktől.</p>
-          <div class="grid-3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
-            <div style="display: flex; flex-direction: column; border: 2px solid #17181A; padding: 26px; background: #FFF9EA;">
-              <div style="color: #1F6B4A; font-size: 15px; letter-spacing: 0.1em; margin-bottom: 14px;">★★★★★</div>
-              <p style="font-size: 15px; line-height: 1.55; margin: 0 0 20px; flex: 1; text-wrap: pretty;">„Nagyon elégedettek voltunk a rendeléssel, minden falat ízlett. Bőséges adagokat kaptunk.”</p>
-              <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;"><span style="font-weight: 700; color: #D02B22;">Somogyi Ildikó</span><span style="color: #8B8880;">Google · 2 hónapja</span></div>
+          <div class="rev-box" style="position: relative; height: 300px; max-width: 780px; margin: 0 auto; border: 2px solid #17181A; background: #FFF9EA; overflow: hidden;">
+            <div class="rev-slide rev-slide-0" style="padding: 40px 48px; display: flex; flex-direction: column; justify-content: center;">
+              <div class="rev-stars" style="color: #1F6B4A; font-size: 16px; letter-spacing: 0.1em; margin-bottom: 16px;">★★★★★</div>
+              <p class="rev-text" style="font-size: 18px; line-height: 1.6; margin: 0 0 20px; text-wrap: pretty;">„Nagyon elégedettek voltunk a rendeléssel, minden falat ízlett. Bőséges adagokat kaptunk.”</p>
+              <div class="rev-meta" style="display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;"><span style="font-weight: 700; color: #D02B22;">Somogyi Ildikó</span><span style="color: #8B8880;">Google · 2 hónapja</span></div>
             </div>
-            <div style="display: flex; flex-direction: column; border: 2px solid #17181A; padding: 26px; background: #FFF9EA;">
-              <div style="color: #1F6B4A; font-size: 15px; letter-spacing: 0.1em; margin-bottom: 14px;">★★★★☆</div>
-              <p style="font-size: 15px; line-height: 1.55; margin: 0 0 20px; flex: 1; text-wrap: pretty;">„Párszor rendeltünk már pizzát, volt már pozitív és egy negatív élményünk is. Kétféle méretből lehet választani, XL és XXL.”</p>
-              <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;"><span style="font-weight: 700; color: #D02B22;">Tibor Miklós</span><span style="color: #8B8880;">Google · 4 hónapja</span></div>
+            <div class="rev-slide rev-slide-1" style="padding: 40px 48px; display: flex; flex-direction: column; justify-content: center;">
+              <div class="rev-stars" style="color: #1F6B4A; font-size: 16px; letter-spacing: 0.1em; margin-bottom: 16px;">★★★★☆</div>
+              <p class="rev-text" style="font-size: 18px; line-height: 1.6; margin: 0 0 20px; text-wrap: pretty;">„Párszor rendeltünk már pizzát, volt már pozitív és egy negatív élményünk is. Kétféle méretből lehet választani, XL és XXL.”</p>
+              <div class="rev-meta" style="display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;"><span style="font-weight: 700; color: #D02B22;">Tibor Miklós</span><span style="color: #8B8880;">Google · 4 hónapja</span></div>
             </div>
-            <div style="display: flex; flex-direction: column; border: 2px solid #17181A; padding: 26px; background: #FFF9EA;">
-              <div style="color: #1F6B4A; font-size: 15px; letter-spacing: 0.1em; margin-bottom: 14px;">★★★★★</div>
-              <p style="font-size: 15px; line-height: 1.55; margin: 0 0 20px; flex: 1; text-wrap: pretty;">„Sokadjára rendeltünk tőlük pizzát. Most sem volt semmi gond. A pizzák finomak, akkorra érkeztek, amikorra mondták, a futár az emeletre is felhozta. Az ilyen véleményeket is írjátok meg, ne csak azt, ha épp becsúszik egy hiba! 😄 Köszönöm.”</p>
-              <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;"><span style="font-weight: 700; color: #D02B22;">Tibor Füle</span><span style="color: #8B8880;">Google · 5 hónapja</span></div>
+            <div class="rev-slide rev-slide-2" style="padding: 40px 48px; display: flex; flex-direction: column; justify-content: center;">
+              <div class="rev-stars" style="color: #1F6B4A; font-size: 16px; letter-spacing: 0.1em; margin-bottom: 16px;">★★★★★</div>
+              <p class="rev-text" style="font-size: 18px; line-height: 1.6; margin: 0 0 20px; text-wrap: pretty;">„Sokadjára rendeltünk tőlük pizzát. Most sem volt semmi gond. A pizzák finomak, akkorra érkeztek, amikorra mondták, a futár az emeletre is felhozta. Az ilyen véleményeket is írjátok meg, ne csak azt, ha épp becsúszik egy hiba! 😄 Köszönöm.”</p>
+              <div class="rev-meta" style="display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;"><span style="font-weight: 700; color: #D02B22;">Tibor Füle</span><span style="color: #8B8880;">Google · 5 hónapja</span></div>
             </div>
-            <div style="display: flex; flex-direction: column; border: 2px solid #17181A; padding: 26px; background: #FFF9EA;">
-              <div style="color: #1F6B4A; font-size: 15px; letter-spacing: 0.1em; margin-bottom: 14px;">★★★★★</div>
-              <p style="font-size: 15px; line-height: 1.55; margin: 0 0 20px; flex: 1; text-wrap: pretty;">„2 pizzát vettünk, személyesen, megvártuk. Gyors volt, finom volt. A kiszolgálás és az étel is rendben volt. Köszönjük!”</p>
-              <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;"><span style="font-weight: 700; color: #D02B22;">Gábor József Mihály</span><span style="color: #8B8880;">Google · egy éve</span></div>
+            <div class="rev-slide rev-slide-3" style="padding: 40px 48px; display: flex; flex-direction: column; justify-content: center;">
+              <div class="rev-stars" style="color: #1F6B4A; font-size: 16px; letter-spacing: 0.1em; margin-bottom: 16px;">★★★★★</div>
+              <p class="rev-text" style="font-size: 18px; line-height: 1.6; margin: 0 0 20px; text-wrap: pretty;">„2 pizzát vettünk, személyesen, megvártuk. Gyors volt, finom volt. A kiszolgálás és az étel is rendben volt. Köszönjük!”</p>
+              <div class="rev-meta" style="display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;"><span style="font-weight: 700; color: #D02B22;">Gábor József Mihály</span><span style="color: #8B8880;">Google · egy éve</span></div>
             </div>
-            <div style="display: flex; flex-direction: column; border: 2px solid #17181A; padding: 26px; background: #FFF9EA;">
-              <div style="color: #1F6B4A; font-size: 15px; letter-spacing: 0.1em; margin-bottom: 14px;">★★★★★</div>
-              <p style="font-size: 15px; line-height: 1.55; margin: 0 0 20px; flex: 1; text-wrap: pretty;">„Gyors kiszállítás. Ízletes, laktató adagok. Eddig minden alkalommal jelezték, ha csak később tudták kiszállítani a rendelést.”</p>
-              <div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;"><span style="font-weight: 700; color: #D02B22;">Zoltán Turcsik</span><span style="color: #8B8880;">Google · 4 éve</span></div>
+            <div class="rev-slide rev-slide-4" style="padding: 40px 48px; display: flex; flex-direction: column; justify-content: center;">
+              <div class="rev-stars" style="color: #1F6B4A; font-size: 16px; letter-spacing: 0.1em; margin-bottom: 16px;">★★★★★</div>
+              <p class="rev-text" style="font-size: 18px; line-height: 1.6; margin: 0 0 20px; text-wrap: pretty;">„Gyors kiszállítás. Ízletes, laktató adagok. Eddig minden alkalommal jelezték, ha csak később tudták kiszállítani a rendelést.”</p>
+              <div class="rev-meta" style="display: flex; justify-content: space-between; align-items: baseline; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em;"><span style="font-weight: 700; color: #D02B22;">Zoltán Turcsik</span><span style="color: #8B8880;">Google · 4 éve</span></div>
+            </div>
+            <div style="position: absolute; bottom: 16px; left: 0; right: 0; display: flex; gap: 8px; justify-content: center; z-index: 3;">
+              <span class="rev-dot rev-dot-0"></span>
+              <span class="rev-dot rev-dot-1"></span>
+              <span class="rev-dot rev-dot-2"></span>
+              <span class="rev-dot rev-dot-3"></span>
+              <span class="rev-dot rev-dot-4"></span>
             </div>
           </div>
         </div>
