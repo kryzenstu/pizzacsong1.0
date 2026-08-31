@@ -50,6 +50,26 @@
 
     .footer-row { flex-direction: column !important; gap: 10px !important; text-align: center !important; padding: 24px 18px !important; }
   }
+
+  .gal-slide { opacity: 0; position: absolute; inset: 0; animation-duration: 16s; animation-iteration-count: infinite; animation-timing-function: linear; }
+  .gal-slide-0 { animation-name: gal-fade-0; }
+  .gal-slide-1 { animation-name: gal-fade-1; }
+  .gal-slide-2 { animation-name: gal-fade-2; }
+  .gal-slide-3 { animation-name: gal-fade-3; }
+  @keyframes gal-fade-0 { 0% { opacity: 0; } 3% { opacity: 1; } 22% { opacity: 1; } 25% { opacity: 0; } 100% { opacity: 0; } }
+  @keyframes gal-fade-1 { 0% { opacity: 0; } 25% { opacity: 0; } 28% { opacity: 1; } 47% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 0; } }
+  @keyframes gal-fade-2 { 0% { opacity: 0; } 50% { opacity: 0; } 53% { opacity: 1; } 72% { opacity: 1; } 75% { opacity: 0; } 100% { opacity: 0; } }
+  @keyframes gal-fade-3 { 0% { opacity: 0; } 75% { opacity: 0; } 78% { opacity: 1; } 97% { opacity: 1; } 100% { opacity: 0; } }
+
+  .gal-dot { width: 9px; height: 9px; border-radius: 50%; animation-duration: 16s; animation-iteration-count: infinite; animation-timing-function: linear; }
+  .gal-dot-0 { animation-name: gal-dot-0; }
+  .gal-dot-1 { animation-name: gal-dot-1; }
+  .gal-dot-2 { animation-name: gal-dot-2; }
+  .gal-dot-3 { animation-name: gal-dot-3; }
+  @keyframes gal-dot-0 { 0% { background-color: #D02B22; } 25% { background-color: #D02B22; } 25% { background-color: rgba(23,24,26,0.25); } 100% { background-color: rgba(23,24,26,0.25); } }
+  @keyframes gal-dot-1 { 0% { background-color: rgba(23,24,26,0.25); } 25% { background-color: rgba(23,24,26,0.25); } 25% { background-color: #D02B22; } 50% { background-color: #D02B22; } 50% { background-color: rgba(23,24,26,0.25); } 100% { background-color: rgba(23,24,26,0.25); } }
+  @keyframes gal-dot-2 { 0% { background-color: rgba(23,24,26,0.25); } 50% { background-color: rgba(23,24,26,0.25); } 50% { background-color: #D02B22; } 75% { background-color: #D02B22; } 75% { background-color: rgba(23,24,26,0.25); } 100% { background-color: rgba(23,24,26,0.25); } }
+  @keyframes gal-dot-3 { 0% { background-color: rgba(23,24,26,0.25); } 75% { background-color: rgba(23,24,26,0.25); } 75% { background-color: #D02B22; } 100% { background-color: #D02B22; } }
 </style>
 </helmet>
 
@@ -115,11 +135,29 @@
         <div id="galeria" style="padding: 80px 64px; border-bottom: 3px solid #17181A;">
           <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 52px; text-transform: uppercase; letter-spacing: -0.03em; margin: 0 0 12px;">Galéria</h2>
           <p style="font-size: 15px; color: #5B5D60; margin: 0 0 36px;">Néhány pillanat a konyhánkból és az ételeinkből.</p>
-          <div class="grid-3" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
-            <div style="height: 280px; overflow: hidden; border: 2px solid #17181A;"><img src="./786429036_1611724677554572_7541401596766743550_n.jpg" alt="Gyros pizza" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
-            <div style="height: 280px; overflow: hidden; border: 2px solid #17181A;"><img src="./765638097_1595972259129814_1792326114794346796_n.jpg" alt="Bőségtál" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
-            <div style="height: 280px; overflow: hidden; border: 2px solid #17181A;"><img src="./768586386_1595972262463147_4394131840180978387_n.jpg" alt="Bőségtál" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
-            <div style="height: 280px; background: #FFF9EA; border: 2px solid #17181A; display: flex; align-items: center; justify-content: center;"><img src="./784693905-cutout.png" alt="Sonkás-csemegeuborkás pizza" style="max-width: 85%; max-height: 85%; object-fit: contain;"></div>
+          <div style="position: relative; height: 420px; border: 2px solid #17181A; overflow: hidden; background: #FFF9EA;">
+            <div class="gal-slide gal-slide-0">
+              <img src="./786429036_1611724677554572_7541401596766743550_n.jpg" alt="Gyros pizza" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              <div style="position: absolute; left: 0; right: 0; bottom: 0; background: rgba(23,24,26,0.75); color: #FBF3E0; padding: 14px 24px; font-family: 'Archivo Black', sans-serif; font-size: 15px; text-transform: uppercase; letter-spacing: 0.06em;">Gyros pizza</div>
+            </div>
+            <div class="gal-slide gal-slide-1">
+              <img src="./765638097_1595972259129814_1792326114794346796_n.jpg" alt="Bőségtál" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              <div style="position: absolute; left: 0; right: 0; bottom: 0; background: rgba(23,24,26,0.75); color: #FBF3E0; padding: 14px 24px; font-family: 'Archivo Black', sans-serif; font-size: 15px; text-transform: uppercase; letter-spacing: 0.06em;">Bőségtál</div>
+            </div>
+            <div class="gal-slide gal-slide-2">
+              <img src="./768586386_1595972262463147_4394131840180978387_n.jpg" alt="Bőségtál" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+              <div style="position: absolute; left: 0; right: 0; bottom: 0; background: rgba(23,24,26,0.75); color: #FBF3E0; padding: 14px 24px; font-family: 'Archivo Black', sans-serif; font-size: 15px; text-transform: uppercase; letter-spacing: 0.06em;">Bőségtál társaságnak</div>
+            </div>
+            <div class="gal-slide gal-slide-3" style="background: #FFF9EA; display: flex; align-items: center; justify-content: center;">
+              <img src="./784693905-cutout.png" alt="Sonkás-csemegeuborkás pizza" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+              <div style="position: absolute; left: 0; right: 0; bottom: 0; background: rgba(23,24,26,0.75); color: #FBF3E0; padding: 14px 24px; font-family: 'Archivo Black', sans-serif; font-size: 15px; text-transform: uppercase; letter-spacing: 0.06em;">Sonkás-csemegeuborkás pizza</div>
+            </div>
+            <div style="position: absolute; bottom: 56px; left: 0; right: 0; display: flex; gap: 8px; justify-content: center; z-index: 3;">
+              <span class="gal-dot gal-dot-0"></span>
+              <span class="gal-dot gal-dot-1"></span>
+              <span class="gal-dot gal-dot-2"></span>
+              <span class="gal-dot gal-dot-3"></span>
+            </div>
           </div>
         </div>
 
