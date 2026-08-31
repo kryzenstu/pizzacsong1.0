@@ -59,8 +59,13 @@
     .grid-2-blocks > div:last-child { margin-bottom: 0 !important; }
     .grid-3 { grid-template-columns: 1fr !important; gap: 16px !important; }
 
-    #rolunk { grid-template-columns: 1fr !important; gap: 24px !important; }
-    #rolunk > div:nth-child(2) { height: 200px !important; }
+    #rolunk { grid-template-columns: 1fr !important; gap: 34px !important; }
+    .about-title { font-size: 34px !important; }
+    .about-lead { font-size: 16px !important; }
+    .about-points { grid-template-columns: 1fr !important; gap: 10px !important; }
+    .about-point { min-height: 0 !important; }
+    .about-visual { min-height: 290px !important; margin: 0 8px 8px 0 !important; }
+    .about-visual::after { right: -8px !important; bottom: -8px !important; }
 
     #kapcsolat { grid-template-columns: 1fr !important; gap: 28px !important; }
 
@@ -103,6 +108,24 @@
   .review-arrow:hover { background: #17181A; color: #FBF3E0; transform: translateY(-2px); }
   .review-arrow:focus-visible, .review-viewport:focus-visible { outline: 3px solid #D02B22; outline-offset: 3px; }
   @media (prefers-reduced-motion: reduce) { .review-viewport { scroll-behavior: auto; } }
+
+  .about-section { position: relative; isolation: isolate; overflow: hidden; }
+  .about-section::before { content: ""; position: absolute; width: 620px; height: 620px; left: -280px; top: -320px; border-radius: 50%; background: radial-gradient(circle, rgba(251,243,224,0.16), rgba(251,243,224,0) 70%); z-index: -1; }
+  .about-eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 20px; font-size: 12px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #F4C76B; }
+  .about-eyebrow::before { content: ""; width: 34px; height: 2px; background: #F4C76B; }
+  .about-title { font-family: 'Archivo Black', sans-serif; font-size: 54px; line-height: 1.02; letter-spacing: -0.035em; text-transform: uppercase; margin: 0 0 24px; max-width: 760px; }
+  .about-lead { font-size: 18px; line-height: 1.7; margin: 0 0 30px; color: #EEE6D2; max-width: 760px; text-wrap: pretty; }
+  .about-points { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-bottom: 30px; }
+  .about-point { min-height: 118px; padding: 20px 18px; border: 1px solid rgba(251,243,224,0.32); background: rgba(251,243,224,0.06); box-sizing: border-box; }
+  .about-point strong { display: block; margin-bottom: 8px; font-family: 'Archivo Black', sans-serif; font-size: 14px; line-height: 1.2; text-transform: uppercase; color: #FBF3E0; }
+  .about-point span { display: block; font-size: 13px; line-height: 1.45; color: #DCD6C8; }
+  .about-link { display: inline-flex; align-items: center; gap: 12px; padding-bottom: 6px; border-bottom: 2px solid #F4C76B; color: #FBF3E0; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+  .about-link:hover { text-decoration: none; color: #F4C76B; }
+  .about-visual { position: relative; min-height: 500px; margin: 0 14px 14px 0; border: 3px solid #17181A; background: #17181A; }
+  .about-visual::after { content: ""; position: absolute; inset: 18px -14px -14px 18px; border: 3px solid #F4C76B; z-index: -1; }
+  .about-visual img { width: 100%; height: 100%; position: absolute; inset: 0; object-fit: cover; display: block; filter: saturate(0.92) contrast(1.04); }
+  .about-caption { position: absolute; left: 24px; right: 24px; bottom: 24px; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 18px; background: rgba(23,24,26,0.88); color: #FBF3E0; backdrop-filter: blur(6px); font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+  .about-caption span:last-child { color: #F4C76B; }
 </style>
 </helmet>
 
@@ -184,12 +207,22 @@
           </div>
         </div>
 
-        <div id="rolunk" style="background: #1F6B4A; color: #FBF3E0; padding: 80px 64px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center;">
-          <div>
-            <h2 style="font-family: 'Archivo Black', sans-serif; font-size: 52px; text-transform: uppercase; letter-spacing: -0.03em; margin: 0 0 24px;">Rólunk</h2>
-            <p style="font-size: 19px; line-height: 1.7; margin: 0; color: #EEE6D2; text-wrap: pretty;">Csongrádi pizzéria vagyunk a Vasút utcában. A klasszikus, kézzel nyújtott pizzák mellett rántott húsokat, gyrost, szárnyas ételeket, bőséges tálakat és desszerteket is készítünk — minden nap friss alapanyagokból. Helyben és házhoz szállítva is várunk.</p>
+        <div id="rolunk" class="about-section" style="background: #1F6B4A; color: #FBF3E0; padding: 96px 7vw; display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr); gap: 6vw; align-items: center; border-top: 3px solid #17181A; border-bottom: 3px solid #17181A;">
+          <div class="about-copy">
+            <div class="about-eyebrow">Pizzaház Csongrád</div>
+            <h2 class="about-title">Ismerős ízek, bőséges adagok</h2>
+            <p class="about-lead">Csongrádi pizzéria vagyunk a Vasút utcában. A kézzel nyújtott pizzák mellett rántott húsokat, gyrost, szárnyas ételeket, bőséges tálakat és desszerteket is készítünk — friss alapanyagokból, gondosan és jó étvágyra.</p>
+            <div class="about-points">
+              <div class="about-point"><strong>Kézzel készítve</strong><span>Pizzáinkat rendelésre nyújtjuk és frissen sütjük.</span></div>
+              <div class="about-point"><strong>Bőséges választék</strong><span>A pizzától a sültes tálakon át a desszertekig.</span></div>
+              <div class="about-point"><strong>Helyben és otthon</strong><span>Várunk a Vasút utcában, vagy házhoz visszük.</span></div>
+            </div>
+            <a class="about-link" href="tel:+3663787434">Rendelj telefonon <span aria-hidden="true">→</span></a>
           </div>
-          <div style="height: 380px; position: relative; overflow: hidden;"><img src="./rolunk.jpg" alt="A Pizzaház Csongrád belső tere" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          <div class="about-visual">
+            <img src="./rolunk.jpg" alt="A Pizzaház Csongrád hangulatos belső tere">
+            <div class="about-caption"><span>Csongrád</span><span>Vasút u. 6.</span></div>
+          </div>
         </div>
 
         <div id="velemenyek" style="padding: 80px 64px; border-bottom: 3px solid #17181A;">
